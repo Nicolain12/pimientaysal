@@ -2,7 +2,8 @@ const path = require('path')
 
 const indexController = {
     index: (req, res) =>{
-        let comidas = [
+
+        res.render('index', {comidas: [
             {
                 nombre: "Carpaccio fresco",
                 descripcion: "Entrada Carpaccio de salmón con cítricos",
@@ -23,9 +24,7 @@ const indexController = {
                 descripcion: "Espárragos blancos con vinagreta de verduras y jamón ibérico",
                 precio: "U$S 37.50" 
             }
-        ]
-
-        res.render('index', {comidas: comidas})
+        ]})
     }
 }
         
